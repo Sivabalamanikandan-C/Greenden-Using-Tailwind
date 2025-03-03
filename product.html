@@ -16,13 +16,13 @@
     <div class="p-3 bg-green-100 flex justify-between items-center shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl font-semibold">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:hidden" fill="none" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor" class="size-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:hidden cursor-pointer" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="size-6" id="menubar">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
 
-        <ul class="flex gap-x-3 text-gray-600 hidden md:flex">
+        <ul class="flex gap-x-3 text-gray-800 hidden md:flex">
             <li class="hover:text-black hover:underline"><a href="./index.html">Home</a></li>
             <li class="hover:text-black hover:underline"><a href="./product.html">Products</a></li>
             <li class="hover:text-black hover:underline"><a href="./contact.html">Contacts</a></li>
@@ -30,17 +30,31 @@
     </div>
     <!-- Responsive Navbar End -->
 
+    <!-- Sidebar Starts -->
+    <section class="bg-green-100 fixed z-20 right-0 top-0 transition-all duration-700" style="height: 100vh; width: 50%; right: -50%;" id="sidenavbar">
+        <div class="text-right p-5">
+            <p class="cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 text-gray-800 md:flex text-center">
+            <li class="hover:text-black hover:underline"><a href="./index.html">Home</a></li>
+            <li class="hover:text-black hover:underline"><a href="./product.html">Products</a></li>
+            <li class="hover:text-black hover:underline"><a href="./contact.html">Contacts</a></li>
+        </ul>
+    </section>
+    <!-- Sidebar Ends -->
+
     <!-- Searchbar Starts -->
     <section class="text-center p-3 m-3">
         <h1 class="text-3xl font-bold">Our Products</h1>
-        <input class="border border-black p-2 m-4 placeholder-black" type="text" placeholder="Search for a products..."
+        <input class="border border-black p-2 m-4 placeholder-black" id="search" type="text" placeholder="Search for a products..."
             style="width: 80%;">
+        <p id="no-items" style="display: none; color: red; font-weight: bold;">No items found</p>
     </section>
     <!-- Searchbar Starts -->
 
     <!-- Products Starts -->
     <section class="p-3">
-        <div class="text-center grid grid-cols-2 gap-5 md:grid-cols-4">
+        <div id="product-container" class="text-center grid grid-cols-2 gap-5 md:grid-cols-4">
             <div>
                 <img src="./images/product-one.png" alt="Lilly Plant"
                     class="inline hover:shadow-xl transform hover:-translate-y-2">
@@ -148,6 +162,8 @@
         <p>@ 2024 Greenden.com</p>
     </section>
     <!-- Footer Section Starts -->
+
+    <script src="product.js"></script>
 </body>
 
 </html>

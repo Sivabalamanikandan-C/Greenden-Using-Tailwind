@@ -17,19 +17,32 @@
     <div class="p-3 bg-green-100 flex justify-between items-center shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl font-semibold">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:hidden" fill="none" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor" class="size-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:hidden cursor-pointer" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="size-6" id="menubar">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
 
-        <ul class="flex gap-x-3 text-gray-600 hidden md:flex">
+        <ul class="flex gap-x-3 text-gray-800 hidden md:flex">
             <li class="hover:text-black hover:underline"><a href="./index.html">Home</a></li>
             <li class="hover:text-black hover:underline"><a href="./product.html">Products</a></li>
             <li class="hover:text-black hover:underline"><a href="./contact.html">Contacts</a></li>
         </ul>
     </div>
     <!-- Responsive Navbar End -->
+
+    <!-- Sidebar Starts -->
+    <section class="bg-green-100 fixed z-20 right-0 top-0 transition-all duration-700" style="height: 100vh; width: 50%; right: -50%;" id="sidenavbar">
+        <div class="text-right p-5">
+            <p class="cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 text-gray-800 md:flex text-center">
+            <li class="hover:text-black hover:underline"><a href="./index.html">Home</a></li>
+            <li class="hover:text-black hover:underline"><a href="./product.html">Products</a></li>
+            <li class="hover:text-black hover:underline"><a href="./contact.html">Contacts</a></li>
+        </ul>
+    </section>
+    <!-- Sidebar Ends -->
 
     <!-- Header Section Strarts -->
     <section class="p-5 bg-green-100 flex justify-center items-center gap-x-10">
@@ -170,7 +183,7 @@
         <h1 class="text-3xl font-bold text-center">Customer Review</h1>
 
         <div class="mt-4 flex flex-col justify-center gap-3 text-white">
-            <div class="p-5 bg-green-900 container">
+            <div class="p-5 bg-green-900 w-full">
                 <p>"I'm so impressed with the quality and service! The floral arrangement was beautiful and delivered
                     right on time. The staff was friendly and helped me pick the perfect design. The flowers were
                     incredibly fresh and lasted longer than expected. I’ll definitely be a repeat customer!"
@@ -178,7 +191,7 @@
                 <p class="text-yellow-300 font-extrabold">Jim</p>
             </div>
 
-            <div class="p-5 bg-green-900 container">
+            <div class="p-5 bg-green-900 w-full">
                 <p>"The flowers were absolutely gorgeous and exactly what I was looking for! The ordering process was
                     easy, and the delivery was right on schedule. The customer service was fantastic—very attentive and
                     helpful. The bouquet looked even better in person than I imagined. I will definitely be ordering
@@ -187,7 +200,7 @@
                 <p class="text-yellow-300 font-extrabold">Genny Mathew</p>
             </div>
 
-            <div class="p-5 bg-green-900 container">
+            <div class="p-5 bg-green-900 w-full">
                 <p>"I'm beyond happy with my purchase! The floral arrangement was stunning and carefully crafted.
                     Delivery was prompt, and the entire process was smooth and hassle-free. The customer service team
                     was friendly and made sure everything was perfect.I’ll definitely be a repeat customer!"
@@ -216,6 +229,8 @@
     </section>
 
     <!-- Footer Section Starts -->
+
+    <script src="index.js"></script>
 </body>
 
 </html>
